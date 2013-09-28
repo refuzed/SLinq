@@ -6,13 +6,13 @@ namespace SLinq
 {
     public class SLinqTests
     {
-        private static readonly string[] data = new string[] { "one", "two", "three", null };
+        private static readonly string[] data = new string[] { "one", "two", "three" };
         private static readonly string[] empty = new string[0];
 
 
         public static void TestContains()
         {
-            string expected = null;
+            var expected = "one";
             var contains = data.Contains(expected);
             Debug.Assert(contains, string.Format("Contains for data should return true for {0}", expected));
 
